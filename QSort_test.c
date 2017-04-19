@@ -27,14 +27,17 @@ void quicksort(int *array, int L, int R)
 		while (i < j && array[i] <= ref)
 			i++;
 
+		// At this time, "i", "j" points to the two numbers what we want. So
+		// time to make a swap.
 		if (i < j)
 			swap(array[i], array[j]);
 
 	}
 
 	array[L] = array[i];
-	array[i] = ref;
+	 array[i] = ref;
 
+	// Remember that array[i] is the ref!
 	quicksort(array, L, i - 1);
 	quicksort(array, i + 1, R);
 
