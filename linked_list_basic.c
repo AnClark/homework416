@@ -9,9 +9,11 @@ typedef struct Node
 
 struct Node *head;
 
+
+
 int main()
 {
-	// struct Node *tail;
+	//实质上，p充当了课本例程中tail的角色
 	struct Node *p, *q;
 	int n;
 
@@ -39,6 +41,7 @@ int main()
 		printf("%d\t", p->data);
 		p = p->next;
 	}
+	
 
 	return 0;
 }
